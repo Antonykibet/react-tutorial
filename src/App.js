@@ -17,10 +17,13 @@ function Main(props){
 }
 
 function App() {
+  function sayHi(){
+    alert('Wozaa!')
+  }
   return(
     <div>
       <Header/>
-      <Main name='Anto' age='22' />
+      <Main onClick={sayHi} name='Anto' age='22' />
     </div>
   )
 }
