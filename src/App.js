@@ -1,12 +1,17 @@
-import logo from './logo.svg';
+import Btn from './btn.js';
 import './App.css';
 function Header(){
   return <h1>Header</h1>
 }
 function Main(props){
+  let mainStyle = {
+    color:'red',
+    border:'solid'
+  }
   return(
-    <div>
+    <div style={mainStyle}>
       <h1>My name is {props.name} and i'm {props.age} years old. </h1>
+      <Btn/>
     </div>
   ) 
 }
