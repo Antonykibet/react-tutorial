@@ -1,7 +1,15 @@
 import Btn from './btn.js';
+import ThemeToggler from './theme.js';
+import Banner from './Banner.js';
+import Footer from './Footer.js';
 import './App.css';
 function Header(){
-  return <h1>Header</h1>
+  return(
+    <div>
+      <h1>Header</h1>
+      <ThemeToggler/>
+    </div>
+  ) 
 }
 function Main(props){
   let mainStyle = {
@@ -18,12 +26,17 @@ function Main(props){
 
 function App() {
   function sayHi(){
-    alert('Wozaa!')
+    alert('Hello')
+  }
+  const data={
+    discount:'20%'
   }
   return(
     <div>
       <Header/>
       <Main onClick={sayHi} name='Anto' age='22' />
+      <Banner discount={data.discount} />
+      <Footer discount={data.discount}/>
     </div>
   )
 }
