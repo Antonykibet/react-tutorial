@@ -1,6 +1,7 @@
 import Btn from './btn.js';
 import ThemeToggler from './theme.js';
 import Banner from './Banner.js';
+import Counter from './Counter.js';
 import Footer from './Footer.js';
 import './App.css';
 function Header(){
@@ -34,8 +35,9 @@ function App() {
   return(
     <div>
       <Header/>
-      <Main onClick={sayHi} name='Anto' age='22' />
       <Banner discount={data.discount} />
+      <Main onClick={sayHi} name='Anto' age='22' />
+      <Counter/>
       <Footer discount={data.discount}/>
     </div>
   )
