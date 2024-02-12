@@ -1,29 +1,10 @@
-import Btn from './btn.js';
-import ThemeToggler from './theme.js';
-import Banner from './Banner.js';
-import Counter from './Counter.js';
-import Footer from './Footer.js';
+import Header from './components/Header.js';
+import Main from './components/Main.js';
+import Banner from './components/Banner.js';
+import Counter from './components/Counter.js';
+import Footer from './components/Footer.js';
+import Form from './components/Form.js'
 import './App.css';
-function Header(){
-  return(
-    <div>
-      <h1>Header</h1>
-      <ThemeToggler/>
-    </div>
-  ) 
-}
-function Main(props){
-  let mainStyle = {
-    color:'red',
-    border:'solid'
-  }
-  return(
-    <div style={mainStyle}>
-      <h1>My name is {props.name} and i'm {props.age} years old. </h1>
-      <Btn/>
-    </div>
-  ) 
-}
 
 function App() {
   function sayHi(){
@@ -38,6 +19,7 @@ function App() {
       <Banner discount={data.discount} />
       <Main onClick={sayHi} name='Anto' age='22' />
       <Counter/>
+      <Form/>
       <Footer discount={data.discount}/>
     </div>
   )
