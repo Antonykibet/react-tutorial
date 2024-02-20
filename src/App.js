@@ -8,6 +8,7 @@ import Form from './components/Form.js'
 import Home from './components/Home.js'
 import About from './components/About.js'
 import Meals from './components/meals.js';
+import Calculator from './components/calculator.js';
 import './App.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Counter/>
       <Form/>
       <Meals/>
+      <Calculator/>
       <Footer discount={data.discount}/>
     </div>
   )
