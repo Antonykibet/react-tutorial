@@ -10,6 +10,7 @@ import About from './components/About.js'
 import Meals from './components/meals.js';
 import Calculator from './components/calculator.js';
 import Timer from './components/Timer.js';
+import Focus from './components/refAttribute.js';
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Meals/>
       <Timer/>
       <Calculator/>
+      <Focus/>
       <Footer discount={data.discount}/>
     </div>
   )
