@@ -1,6 +1,13 @@
 body{
   margin-bottom: 20vh;
 }
+nav{
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100%;
+  justify-content: space-around;
+}
 .App {
   text-align: center;
 }

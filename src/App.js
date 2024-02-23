@@ -1,43 +1,30 @@
 import {Routes, Route, Link} from 'react-router-dom'
-import Header from './components/Header.js';
-import Main from './components/Main.js';
-import Banner from './components/Banner.js';
-import Counter from './components/Counter.js';
-import Footer from './components/Footer.js';
-import Form from './components/Form.js'
+import { useContext, useState } from 'react';
+
+import { userContext } from "./contexts"
 import Home from './components/Home.js'
 import About from './components/About.js'
-import Meals from './components/meals.js';
-import Calculator from './components/calculator.js';
-import Timer from './components/Timer.js';
-import Focus from './components/refAttribute.js';
+import ContextExample from './components/ContextExample.js';
+
 import './App.css';
 
+
 function App() {
-  const data={
-    discount:'20%'
-  }
+  const [username, setUsername] = useState('Antony')
   return(
-    <div>
+    <userContext.Provider value={username}>
       <nav>
         <Link to='/' >Home</Link>
         <Link to='/about'>About</Link>
+        <Link to='/context'>Context</Link>
+        <div>Logged in as {useContext(userContext)}</div>
       </nav>
       <Routes>
         <Route path='/' element = {<Home/>}/>
         <Route path='/about' element = {<About/>}/>
+        <Route path='/context' element = {<ContextExample/>}/>
       </Routes>
-      <Header/>
-      <Banner discount={data.discount} />
-      <Main name='Anto' age='22' />
-      <Counter/>
-      <Form/>
-      <Meals/>
-      <Timer/>
-      <Calculator/>
-      <Focus/>
-      <Footer discount={data.discount}/>
-    </div>
+    </userContext.Provider>
   )
 }
 
