@@ -7,6 +7,7 @@ import About from './components/About.js'
 import ContextExample from './components/ContextExample.js';
 import RandomUsers from './components/RandomUsers.js';
 import Chatbox from './components/message(useReducer).js';
+import Dialog from './components/Dialogbox(composition).js'
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
         <Link to='/context'>Context API</Link>
         <Link to='/randomUsers'>Random Users</Link>
         <Link to='/useReducer'>useReducer</Link>
+        <Link to='/containment'>containment</Link>
         <div>Logged in as {useContext(userContext)}</div>
       </nav>
       <Routes>
@@ -29,6 +31,7 @@ function App() {
         <Route path='/context' element = {<ContextExample/>}/>
         <Route path='/randomUsers' element = {<RandomUsers/>}/>
         <Route path='/useReducer' element={<Chatbox/>}></Route>
+        <Route path='/containment' element={<Dialog/>}></Route>
       </Routes>
     </userContext.Provider>
   )
