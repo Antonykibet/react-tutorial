@@ -8,12 +8,13 @@ import ContextExample from './components/ContextExample.js';
 import RandomUsers from './components/RandomUsers.js';
 import Chatbox from './components/message(useReducer).js';
 import Dialog from './components/Dialogbox(composition).js'
+import TodaysMenu  from './components/AvailableProducts.js';
 
 import './App.css';
 
 
 function App() {
-  const [username] = useState('Antony')
+  const [username,setUsername] = useState('Antony')
   return(
     <userContext.Provider value={username}>
       <nav>
@@ -23,6 +24,7 @@ function App() {
         <Link to='/randomUsers'>Random Users</Link>
         <Link to='/useReducer'>useReducer</Link>
         <Link to='/containment'>containment</Link>
+        <Link to='/renderprops'>Render Props</Link>
         <div>Logged in as {useContext(userContext)}</div>
       </nav>
       <Routes>
@@ -32,6 +34,7 @@ function App() {
         <Route path='/randomUsers' element = {<RandomUsers/>}/>
         <Route path='/useReducer' element={<Chatbox/>}></Route>
         <Route path='/containment' element={<Dialog/>}></Route>
+        <Route path='/renderprops' element={<TodaysMenu/>}></Route>
       </Routes>
     </userContext.Provider>
   )
